@@ -1,0 +1,54 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background-color: blue;
+}
+h1{
+    text-align: center;
+    color: white;
+}
+section{
+    position: relative;
+    text-align: center;
+    margin: auto;
+    background-color: white;
+    width: 500px;
+    height: 300px;
+    border-radius: 8px;
+}
+#autoral{
+    color: grey;
+}
+#senha{
+    width: 250px;
+    height: 30px;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 5px;
+    border-color: blue;
+}
+#saida{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+input{
+    border: 0;
+    background-color: blue;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid blue;
+    width: 100px;
+    height: 40px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+input:hover{
+    background-color: rgba(0, 0, 255, 0.459);
+}

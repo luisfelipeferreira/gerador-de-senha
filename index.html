@@ -8,7 +8,7 @@
 
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body onload="carregar()">
     <!-- Header -->
     <header>
         <h1>Gerador de senha</h1>
@@ -16,9 +16,18 @@
 
     <!-- Section -->
     <section>
-        <!-- Saida -->
+        <!-- Imagem -->
         <div>
-            <img src="key.png" alt="key for &copy; Baianat" width="100px" height="100px">
+            <img src="imagens/key.png" alt="imagem chave" width="100px" height="100px" onmouseout="foraImg()" onmouseenter="dentro()">
+            <p id="autoral">key for <img src="imagens/baianat-autor.jpg" alt="autor" width="15px" height="15px" style="border-radius: 50px;"> Baianat</p>
+        </div>
+
+        <!-- Botão e saida -->
+        <div id="saida">
+            <input type="button" value="Gerar Senha">
+            <div id="senha">
+
+            </div>
         </div>
     </section>
 
