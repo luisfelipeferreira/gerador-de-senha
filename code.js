@@ -1,22 +1,53 @@
 var autoral = document.getElementById('autoral')
-var gerador = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%-&*"
+var geradorMinuscula = "abcdefghijklmnopqrstuvwxyz"
+var geradorMaiuscula = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+var geradorNumero = "0123456789"
+var geradorSimbolo = "!@#$%-&*"
 
 function gerarSenha(){
     var senha = document.getElementById('senha')
-    var aleatorio;
+    var aleatorioMinuscula;
+    var aleatorioMaiuscula;
+    var aleatorioNumero;
+    var aleatorioSimbolo;
     if(senha.innerText<9){
-        for(var i=0;i<=9;i++){
-        aleatorio = Math.round(Math.random()*70)
-        senha.innerText += gerador[aleatorio]
+        for(var i=0;i<=3;i++){
+        aleatorioMinuscula = Math.round(Math.random()*25)
+        senha.innerText += geradorMinuscula[aleatorioMinuscula]
         }
+        for(var j=0;j<=3;j++){
+            aleatorioMaiuscula = Math.round(Math.random()*25)
+            senha.innerText += geradorMaiuscula[aleatorioMaiuscula]
+        }
+        for(var k=0;k<=1;k++){
+            aleatorioNumero = Math.round(Math.random()*9)
+            senha.innerText += geradorNumero[aleatorioNumero]
+        }
+        for(var l=0;l<=1;l++){
+            aleatorioSimbolo = Math.round(Math.random()*7)
+            senha.innerText += geradorSimbolo[aleatorioSimbolo]
+        }
+
     }else{
             senha.innerText=''
-            for(var i=0;i<=9;i++){
-            aleatorio = Math.round(Math.random()*69)
-            senha.innerText += gerador[aleatorio]
+            for(var i=1;i<=3;i++){
+                aleatorioMinuscula = Math.round(Math.random()*25)
+                senha.innerText += geradorMinuscula[aleatorioMinuscula]
+                }
+                for(var j=1;j<=3;j++){
+                    aleatorioMaiuscula = Math.round(Math.random()*25)
+                    senha.innerText += geradorMaiuscula[aleatorioMaiuscula]
+                }
+                for(var k=1;k<=1;k++){
+                    aleatorioNumero = Math.round(Math.random()*9)
+                    senha.innerText += geradorNumero[aleatorioNumero]
+                }
+                for(var l=1;l<=1;l++){
+                    aleatorioSimbolo = Math.round(Math.random()*7)
+                    senha.innerText += geradorSimbolo[aleatorioSimbolo]
+                }
         }
     }
-}
 
 function foraImg(){
     autoral.hidden = true
