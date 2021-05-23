@@ -10,40 +10,39 @@ function gerarSenha(){
     var aleatorioMaiuscula;
     var aleatorioNumero;
     var aleatorioSimbolo;
-    if(senha.innerText<9){
-        for(var i=0;i<=3;i++){
-        aleatorioMinuscula = Math.round(Math.random()*25)
+    if(senha.innerText.length<=7){
+        for(var i=1;i<=3;i++){
+        aleatorioMinuscula = Math.round(Math.random()*(geradorMinuscula.length-1))
         senha.innerText += geradorMinuscula[aleatorioMinuscula]
         }
-        for(var j=0;j<=3;j++){
-            aleatorioMaiuscula = Math.round(Math.random()*25)
+        for(var j=1;j<=3;j++){
+            aleatorioMaiuscula = Math.round(Math.random()*(geradorMaiuscula.length-1))
             senha.innerText += geradorMaiuscula[aleatorioMaiuscula]
         }
-        for(var k=0;k<=1;k++){
-            aleatorioNumero = Math.round(Math.random()*9)
+        for(var k=1;k<=1;k++){
+            aleatorioNumero = Math.round(Math.random()*(geradorNumero.length-1))
             senha.innerText += geradorNumero[aleatorioNumero]
         }
-        for(var l=0;l<=1;l++){
-            aleatorioSimbolo = Math.round(Math.random()*7)
+        for(var l=1;l<=1;l++){
+            aleatorioSimbolo = Math.round(Math.random()*(geradorSimbolo.length-1))
             senha.innerText += geradorSimbolo[aleatorioSimbolo]
         }
-
     }else{
             senha.innerText=''
             for(var i=1;i<=3;i++){
-                aleatorioMinuscula = Math.round(Math.random()*25)
+                aleatorioMinuscula = Math.round(Math.random()*(geradorMinuscula.length-1))
                 senha.innerText += geradorMinuscula[aleatorioMinuscula]
                 }
                 for(var j=1;j<=3;j++){
-                    aleatorioMaiuscula = Math.round(Math.random()*25)
+                    aleatorioMaiuscula = Math.round(Math.random()*(geradorMaiuscula.length-1))
                     senha.innerText += geradorMaiuscula[aleatorioMaiuscula]
                 }
                 for(var k=1;k<=1;k++){
-                    aleatorioNumero = Math.round(Math.random()*9)
+                    aleatorioNumero = Math.round(Math.random()*(geradorNumero.length-1))
                     senha.innerText += geradorNumero[aleatorioNumero]
                 }
                 for(var l=1;l<=1;l++){
-                    aleatorioSimbolo = Math.round(Math.random()*7)
+                    aleatorioSimbolo = Math.round(Math.random()*(geradorSimbolo.length-1))
                     senha.innerText += geradorSimbolo[aleatorioSimbolo]
                 }
         }

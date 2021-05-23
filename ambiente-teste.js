@@ -1,4 +1,7 @@
 var nome = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%-&*"
 var comprimento = nome.length
 
-console.log(comprimento)
+let aleatorio = Math.round(Math.random()*comprimento)
+
+console.log(nome[aleatorio])
+
