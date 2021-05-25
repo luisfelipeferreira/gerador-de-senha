@@ -1,16 +1,21 @@
-var nome = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%-&*"
-var comprimento = nome.length
+var nome = ['#','$','%','-','&','*']//abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@,['#','$','%','-','&','*']
 
-let aleatorio;
-let mudar1;
-let mudar2;
-let trocar;
+function shuffle(array) {
+    var m = array.length, t, i;
+  
+    // While there remain elements to shuffle…
+    while (m) {
+  
+      // Pick a remaining element…
+      i = Math.floor(Math.random() * m--);
+  
+      // And swap it with the current element.
+      t = array[m];
+      array[m] = array[i];
+      array[i] = t;
+    }
+  
+    return array;
+  }
 
-for(var i=0;i<5;i++){
-    aleatorio = Math.round(Math.random()*comprimento)
-    mudar1 = Math.round(Math.random()*4)
-    mudar2 = Math.round(Math.random()*4)
-    resultado = nome[aleatorio]
-    trocar =  resultado.replace(resultado[mudar1,mudar2])
-    console.log(resultado)
-}
+console.log(shuffle(nome))
